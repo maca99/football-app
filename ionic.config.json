@@ -1,0 +1,8 @@
+{
+  "name": "FootballApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "60758b45"
+}
