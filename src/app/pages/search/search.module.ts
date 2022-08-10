@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CompetizioniPageRoutingModule } from './competizioni-routing.module';
+import { SearchPageRoutingModule } from './search-routing.module';
 
-import { CompetizioniPage } from './competizioni.page';
+import { SearchPage } from './search.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CompetizioniPageRoutingModule
+    SearchPageRoutingModule
   ],
-  declarations: [CompetizioniPage]
+  declarations: [SearchPage]
 })
-export class CompetizioniPageModule {}
+export class SearchPageModule {}

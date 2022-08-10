@@ -3,19 +3,20 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'tab',
+    loadChildren: () => import('./pages/tab/tab.module').then( m => m.TabPageModule)
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },  {
-    path: 'notizie',
-    loadChildren: () => import('./notizie/notizie.module').then( m => m.NotiziePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'competizioni',
-    loadChildren: () => import('./competizioni/competizioni.module').then( m => m.CompetizioniPageModule)
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   },
   {
-    path: 'preferita',
-    loadChildren: () => import('./preferita/preferita.module').then( m => m.PreferitaPageModule)
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   }
 
 

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PreferitaPageRoutingModule } from './preferita-routing.module';
+import { TabPageRoutingModule } from './tab-routing.module';
 
-import { PreferitaPage } from './preferita.page';
+import { TabPage } from './tab.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PreferitaPageRoutingModule
+    TabPageRoutingModule
   ],
-  declarations: [PreferitaPage]
+  declarations: [TabPage]
 })
-export class PreferitaPageModule {}
+export class TabPageModule {}
