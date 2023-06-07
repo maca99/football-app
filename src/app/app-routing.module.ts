@@ -1,34 +1,15 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { HomePage } from './pages/home/home.page';
 
-const routes: Routes = [
-  {
-    path: 'tab',
-    loadChildren: () => import('./pages/tab/tab.module').then( m => m.TabPageModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'search',
-    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
-  },
-  {
-    path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
-    path: 'competizioni',
-    loadChildren: () => import('./pages/competizioni/competizioni.module').then( m => m.CompetizioniPageModule)
-  }
-
-
-];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  RouterModule.forRoot([
+    { path: 'home', component:HomePage },
+  ])
   ],
   exports: [RouterModule]
 })
