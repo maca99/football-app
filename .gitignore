@@ -28,6 +28,6 @@ plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
-
+.angular/cache/
 .DS_Store
 Thumbs.db
