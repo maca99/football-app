@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Notizie</ion-title>
+    <ion-title>Notizia</ion-title>
   </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let articolo of articolo" (click)="goToNews(articolo)">
+  <ion-card>
     <img alt="Silhouette of mountains" src="https://media.gettyimages.com/id/610435448/it/vettoriale/buone-notizie-titolo-giornale-isolato-su-sfondo-bianco.jpg?s=612x612&w=gi&k=20&c=p7Z3QnEVQFwwwK8OpFyU1bwQPJkXwbTWb8GHP4K5BJ0=" />
     <ion-card-header>
       <ion-card-title>{{articolo.titolo}}</ion-card-title>
@@ -14,7 +14,7 @@
     </ion-card-header>
   
     <ion-card-content>
-      
+      {{articolo.testo}}
     </ion-card-content>
   </ion-card>
 </ion-content>
