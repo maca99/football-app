@@ -5,7 +5,7 @@ import { CompetizoniPage } from './competizoni.page';
 
 const routes: Routes = [
   {
-    path: 'Competizioni',
+    path: '',
     component: CompetizoniPage
   }
 ];

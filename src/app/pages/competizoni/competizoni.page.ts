@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CompetitionService } from 'src/app/competition.service';
 
 @Component({
   selector: 'app-competizoni',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetizoniPage implements OnInit {
 
-  constructor() { }
+  competizione:any;
+
+  constructor(private competitionService : CompetitionService,private router: Router) { }
 
   ngOnInit() {
+    this.competitionService
+    .getCompetition()
+        .subscribe(data =>
+          {console.log(data);
+            this.competizione=data;
+          }
+        );
+  }
+
+  goToCompetition(competizione){
+    this.competitionService.currentCompetition=competizione;
+    this.router.navigate(['/competizione']);
   }
 
 }
