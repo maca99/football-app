@@ -28,6 +28,14 @@ const routes: Routes = [
   {
     path: 'news',
     loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'competizione',
+    loadChildren: () => import('./competizione/competizione.module').then( m => m.CompetizionePageModule)
+  },
+  {
+    path: 'dettaglio-competizione',
+    loadChildren: () => import('./pages/dettaglio-competizione/dettaglio-competizione.module').then( m => m.DettaglioCompetizionePageModule)
   }
   
 ];
