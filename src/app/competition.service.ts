@@ -6,11 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CompetitionService {
 
-  currentCompetition:any;
+  constructor(public http:HttpClient) {}
 
-  constructor(public http:HttpClient) { }
-
-  getCompetition(){
-    return this.http.get("http://localhost:8080/competition");
+  getCompetition(id:number){
+    return this.http.get('http://localhost:8080/competition/'+id);
   }
 }

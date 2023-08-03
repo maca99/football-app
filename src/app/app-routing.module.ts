@@ -30,7 +30,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   },
   {
-    path: 'dettaglio-competizione',
+    path: 'dettaglio-competizione/:id',
     loadChildren: () => import('./pages/dettaglio-competizione/dettaglio-competizione.module').then( m => m.DettaglioCompetizionePageModule)
   }
   

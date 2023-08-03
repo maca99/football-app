@@ -1,0 +1,26 @@
+.round-image {
+    width: 150px; /* Imposta la larghezza dell'immagine */
+    height: 150px; /* Imposta l'altezza dell'immagine */
+    border-radius: 50%; /* Rendi l'immagine un cerchio impostando il bordo ad un raggio del 50% della larghezza/altezza */
+    overflow: hidden; /* Nasconde le parti dell'immagine fuori dal cerchio */
+    margin-top: 20px; /* Aggiungi spazio sopra l'immagine */
+  }
+  
+  .round-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scala e ritaglia l'immagine per adattarla al cerchio */
+  }
+  ion-card{
+    min-width: 240px;
+  }
+  
+  ion-card-content {
+    
+    margin-top: 20px; /* Aggiungi spazio tra l'immagine e il testo */
+  }
+  
+  h1 {
+    font-size: 24px; /* Regola la dimensione del testo */
+    margin-bottom: 20px; /* Aggiungi spazio sotto la scritta */
+  }

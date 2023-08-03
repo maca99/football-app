@@ -1,31 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CompetitionService } from 'src/app/competition.service';
 
 @Component({
   selector: 'app-competizoni',
   templateUrl: './competizoni.page.html',
   styleUrls: ['./competizoni.page.scss'],
 })
-export class CompetizoniPage implements OnInit {
+export class CompetizoniPage {
 
-  competizione:any;
+  constructor(private router: Router) { }
 
-  constructor(private competitionService : CompetitionService,private router: Router) { }
-
-  ngOnInit() {
-    this.competitionService
-    .getCompetition()
-        .subscribe(data =>
-          {console.log(data);
-            this.competizione=data;
-          }
-        );
-  }
-
-  goToCompetition(competizione){
-    this.competitionService.currentCompetition=competizione;
-    this.router.navigate(['/competizione']);
+  goToCompetition(id:number){
+    this.router.navigate(['dettaglio-competizione',id]);
   }
 
 }

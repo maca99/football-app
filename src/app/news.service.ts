@@ -13,4 +13,5 @@ export class NewsService {
   getNews(){
     return this.http.get('http://localhost:8080/news');
   }
+
 }
