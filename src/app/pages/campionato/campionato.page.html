@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>campionato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let campionato of campionato" (click)="goToNews(articolo)>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="partly-sunny-outline"></ion-icon>
+        Gionata
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="medal-outline"></ion-icon>
+        Classifica
+      </ion-tab-button>
+      <ion-tab-button tab="library">
+        <ion-icon name="football-outline"></ion-icon>
+        Marcatori
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

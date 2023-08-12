@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>competizoni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+    <ion-item *ngFor="let zone of zone" (click)="goToCompetition(zone.id)">
+        <img alt="logo" src="{{zone.image}}"/>
+      <ion-label>{{zone.name}}</ion-label>
+    </ion-item>
+
+</ion-content>

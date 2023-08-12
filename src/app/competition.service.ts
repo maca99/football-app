@@ -8,7 +8,13 @@ export class CompetitionService {
 
   constructor(public http:HttpClient) {}
 
-  getCompetition(id:number){
-    return this.http.get('http://localhost:8080/competition/'+id);
+  getCompetitionForZone(id:number){
+    return this.http.get('http://localhost:8080/competition/country/'+id);
   }
+
+  getZone(){
+    return this.http.get('http://localhost:8080/zone');
+  }
+
+ 
 }

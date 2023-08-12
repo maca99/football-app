@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompetitionService } from 'src/app/competition.service';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dettaglio-competizione',
@@ -9,21 +9,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DettaglioCompetizionePage implements OnInit {
 
-  competizione: any;
+  competizioni: any;
 
-  constructor(private competitionService: CompetitionService, private route: ActivatedRoute) { }
+  constructor(
+    private competitionService: CompetitionService,
+    private route: ActivatedRoute,
+     private router: Router) 
+     { }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.competitionService.getCompetition(id).subscribe(
+    this.competitionService.getCompetitionForZone(id).subscribe(
       (data) => {
-        this.competizione = data;
-        console.log(this.competizione);
+        this.competizioni = data;
+        console.log(this.competizioni);
       },
       (error) => {
         console.error('Errore nel recuperare la competizione: ', error);
       }
     );
+  }
 
+  goToCampionato(){
+    this.router.navigate(['campionato']);
   }
 }

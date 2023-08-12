@@ -10,8 +10,8 @@ const routes: Routes = [
     path:'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
-  {path: 'competizioni',
-  loadChildren: () => import('./pages/competizoni/competizoni.module').then( m => m.CompetizoniPageModule)
+  {path: 'zone',
+  loadChildren: () => import('./pages/Zone/zone.module').then( m => m.ZonePageModule)
   },
   {
     path: 'favourite',
@@ -31,8 +31,13 @@ const routes: Routes = [
   },
   {
     path: 'dettaglio-competizione/:id',
-    loadChildren: () => import('./pages/dettaglio-competizione/dettaglio-competizione.module').then( m => m.DettaglioCompetizionePageModule)
+    loadChildren: () => import("./pages/dettaglio-competizione/dettaglio-competizione.module").then(m => m.DettaglioCompetizionePageModule)
+  },
+  {
+    path: 'campionato',
+    loadChildren: () => import('./pages/campionato/campionato.module').then( m => m.CampionatoPageModule)
   }
+
   
 ];
 
