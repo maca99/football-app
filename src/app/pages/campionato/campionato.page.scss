@@ -1,0 +1,38 @@
+/* Stile generale */
+ion-content {
+    --background: #f0f0f0; /* Sfondo standard */
+  }
+  
+  /* Header con immagine tonda e titolo */
+  .header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center; /* Allinea orizzontalmente al centro */
+    align-items: center; /* Allinea verticalmente al centro */
+  }
+
+  
+  .header-image {
+    width: 200px; /* Imposta la larghezza desiderata per l'immagine */
+    height: 200px; /* Imposta l'altezza desiderata per l'immagine */
+    border-radius: 50%; /* Rendi l'immagine tonda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra leggera */
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  /* Contenuto */
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Sfondo bianco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra leggera */
+  }

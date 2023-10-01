@@ -4,22 +4,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor="let campionato of campionato" (click)="goToNews(articolo)>
+<ion-content>
+
+  <div class="header">
+    <div class="image-container">
+      <ion-avatar class="header-image" >
+        <img src="{{campionato?.logo}}" alt="Immagine">
+      </ion-avatar>
+    </div>
+    <h2 class="title">{{ campionato?.name }}</h2>
+  </div>
+  <div class="content">
+    <p>
+      {{campionato?.details}}
+    </p>
+  </div>
+  <div>
+    <ion-router-outlet></ion-router-outlet>
+  </div>
   <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
+    <ion-tab-bar slot="bottom" >
+      <ion-tab-button tab="giornata">
         <ion-icon name="partly-sunny-outline"></ion-icon>
-        Gionata
+        Giornata
       </ion-tab-button>
-      <ion-tab-button tab="radio">
+      <ion-tab-button tab="classifica">
         <ion-icon name="medal-outline"></ion-icon>
         Classifica
       </ion-tab-button>
-      <ion-tab-button tab="library">
-        <ion-icon name="football-outline"></ion-icon>
+      <ion-tab-button tab="marcatori">
+        <ion-icon name="partly-sunny-outline"></ion-icon>
         Marcatori
       </ion-tab-button>
-
     </ion-tab-bar>
   </ion-tabs>
 </ion-content>

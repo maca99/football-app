@@ -14,6 +14,7 @@ export class NewsPage implements OnInit {
 
   ngOnInit() {
     this.articolo=this.newsService.currentNews;
+    console.log(this.articolo);
   }
 
 }

@@ -1,0 +1,25 @@
+/* Stile personalizzato per gli item */
+.custom-item {
+    display: flex;
+    align-items: center;
+    text-align-last: center;
+    padding: 10px; /* Aggiungi spazio tra gli item */
+  }
+  
+  /* Stile personalizzato per le immagini */
+  .custom-image {
+    max-width: 50px; /* Limita la larghezza delle immagini */
+    height: auto; /* Mantieni l'aspetto proporzionale */
+    padding-bottom: 1px; /* Spazio tra l'immagine e l'etichetta */
+  }
+  .label{
+    font-size: larger;
+  }
+  
+  /* Media query per dispositivi di piccole dimensioni */
+  @media (max-width: 768px) {
+    .custom-image {
+      max-width: 30px; /* Riduci ulteriormente la larghezza delle immagini su dispositivi più piccoli */
+    }
+  }
+  

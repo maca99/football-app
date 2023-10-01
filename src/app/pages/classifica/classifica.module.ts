@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ZonePageRoutingModule } from './zone-routing.module';
+import { ClassificaPageRoutingModule } from './classifica-routing.module';
 
-import { ZonePage } from './zone.page';
+import { ClassificaPage } from './classifica.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ZonePageRoutingModule
+    ClassificaPageRoutingModule
   ],
-  declarations: [ZonePage]
+  declarations: [ClassificaPage]
 })
-export class ZonePageModule {}
+export class ClassificaPageModule {}

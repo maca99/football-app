@@ -10,9 +10,6 @@ const routes: Routes = [
     path:'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
-  {path: 'zone',
-  loadChildren: () => import('./pages/Zone/zone.module').then( m => m.ZonePageModule)
-  },
   {
     path: 'favourite',
     loadChildren: () => import('./pages/favourite/favourite.module').then( m => m.FavouritePageModule)
@@ -30,15 +27,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   },
   {
-    path: 'dettaglio-competizione/:id',
-    loadChildren: () => import("./pages/dettaglio-competizione/dettaglio-competizione.module").then(m => m.DettaglioCompetizionePageModule)
+    path: 'competition',
+    loadChildren: () => import("./pages/competition/competition.module").then(m => m.CompetitonPageModule)
   },
   {
-    path: 'campionato',
-    loadChildren: () => import('./pages/campionato/campionato.module').then( m => m.CampionatoPageModule)
-  }
+    path: 'campionato/:id', 
+    loadChildren: () => import('./pages/campionato/campionato.module').then(m => m.CampionatoPageModule)
+  },
 
-  
 ];
 
 @NgModule({

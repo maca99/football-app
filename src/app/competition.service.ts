@@ -5,16 +5,23 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CompetitionService {
+  
+  current:any;
+  private apiUrl = "http://localhost:8080/";
 
   constructor(public http:HttpClient) {}
 
-  getCompetitionForZone(id:number){
-    return this.http.get('http://localhost:8080/competition/country/'+id);
-  }
+    getAllCompetition(){
+      const url = `${this.apiUrl}competitions`;
+      return this.http.get(url);
+    }
 
-  getZone(){
-    return this.http.get('http://localhost:8080/zone');
-  }
+    getCompetitionById(id:number){
+      const url = `${this.apiUrl}competition/${id}`;
+      return this.http.get(url);
+    }
 
- 
-}
+
+  }
+    
+

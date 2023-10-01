@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CompetitionService } from 'src/app/competition.service';
+import { ActivatedRoute} from '@angular/router'; // Importa Router
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'campionato-campionato',
@@ -7,11 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampionatoPage implements OnInit {
 
-  campionato:any;
+  campionato: any;
 
-  constructor() { }
+  constructor(
+    private competitionservice: CompetitionService,
+    private route: ActivatedRoute,
+    public navCtrl: NavController
+  ) {}
 
   ngOnInit() {
+    // Ottieni l'ID dall'URL
+    const id = this.route.snapshot.params.id;
+
+    // Cerca il campionato utilizzando il servizio
+    this.competitionservice.getCompetitionById(id).subscribe((campionato) => {
+      this.campionato = campionato;
+    });
+    
   }
+
 
 }
