@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompetitionService } from 'src/app/competition.service';
 
 @Component({
   selector: 'app-classifica',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassificaPage implements OnInit {
 
-  constructor() { }
+  private competition:any;
+  private ranking:any;
+
+  constructor(
+    private competitionservice: CompetitionService,
+    private rankingservice: CompetitionService,
+
+  ) { }
 
   ngOnInit() {
+    this.competition=this.competitionservice.current;
+    this.rankingservice.getRankingCompetition(this.competition).subscribe((ranking) => {
+      this.ranking = ranking;
+      console.log(ranking);
+    });
   }
 
 }

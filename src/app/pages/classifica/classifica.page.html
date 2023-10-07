@@ -1,9 +1,71 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>classifiche</ion-title>
+    <ion-title>Classifica</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-grid class="ion-text-center">
+
+    <!-- Intestazioni della tabella -->
+    <ion-row class="header-row">
+      <ion-col size="5">
+        <ion-text>Squadra</ion-text>
+      </ion-col>
+
+      <ion-col >
+        <ion-text>PT</ion-text>
+      </ion-col>
+
+      <ion-col>
+        <ion-text>G</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>V</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>N</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>P</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>GS</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>GF</ion-text>
+      </ion-col>
+    </ion-row>
+    <!-- Dati tabellari -->
+    <ion-row *ngFor="let rank of ranking">
+      <ion-col size="5">
+        <ion-text>{{rank.team.name}}</ion-text>
+      </ion-col>
+
+      <ion-col >
+        <ion-text>{{rank.points}}</ion-text>
+      </ion-col>
+
+      <ion-col>
+        <ion-text>{{rank.totalMatches}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{rank.wins}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{rank.draws}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{rank.losses}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{rank.goalsFor}}</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{rank.goalsAgainst}}</ion-text>
+      </ion-col>
+      </ion-row>
+
+  </ion-grid>
 </ion-content>

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GiornataPageRoutingModule } from './giornata-routing.module';
+import { GiornatePageRoutingModule } from './giornate-routing.module';
 
-import { GiornataPage } from './giornata.page';
+import { GiornatePage } from './giornate.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GiornataPageRoutingModule
+    GiornatePageRoutingModule
   ],
-  declarations: [GiornataPage]
+  declarations: [GiornatePage]
 })
-export class GiornataPageModule {}
+export class GiornatePageModule {}

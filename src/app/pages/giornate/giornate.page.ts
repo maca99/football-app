@@ -5,13 +5,13 @@ import { MatchServiceService } from 'src/app/match-service.service';
 
 @Component({
   selector: 'app-giornata',
-  templateUrl: './giornata.page.html',
-  styleUrls: ['./giornata.page.scss'],
+  templateUrl: './giornate.page.html',
+  styleUrls: ['./giornate.page.scss'],
 })
-export class GiornataPage implements OnInit {
+export class GiornatePage implements OnInit {
 
   competition:any;
-  matchDays
+  matches:any
 
   constructor(
     private competitionservice: CompetitionService,
@@ -22,10 +22,9 @@ export class GiornataPage implements OnInit {
   ngOnInit(){
   
     this.competition=this.competitionservice.current;
-   /* this.matchservice.getDayMatchesById(this.competition).subscribe((matchDays) => {
-      this.matchDays = matchDays;
-    });*/
-    console.log(this.competition.id);
+    this.matchservice.getDayMatchesById(this.competition.id).subscribe((matchDays) => {
+      this.matches = matchDays;
+    });
   }
 
 

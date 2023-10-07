@@ -14,4 +14,5 @@ export class MatchServiceService {
     const url = `${this.apiUrl}competition/${id}/daymatch`;
     return this.http.get(url);
   }
+
 }

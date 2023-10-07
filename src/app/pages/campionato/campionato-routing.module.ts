@@ -18,8 +18,8 @@ const routes: Routes = [
         loadChildren: () => import('../marcatori/marcatori.module').then( m => m.MarcatoriPageModule)
       },
       {
-        path: 'giornata',
-        loadChildren: () => import('../giornata/giornata.module').then(m => m.GiornataPageModule)
+        path: 'giornate',
+        loadChildren: () => import('../giornate/giornate.module').then(m => m.GiornatePageModule)
       },
       {
         path: 'classifica',
