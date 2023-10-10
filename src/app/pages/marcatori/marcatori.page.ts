@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompetitionService } from 'src/app/competition.service';
 
 @Component({
   selector: 'app-marcatori',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarcatoriPage implements OnInit {
 
-  constructor() { }
+  private competition:any;
+  private ranking:any;
+
+  constructor(private competitionservice: CompetitionService) { }
 
   ngOnInit() {
+    this.competition=this.competitionservice.current;
+    this.competitionservice.getTopScorers(this.competition).subscribe((ranking) => {
+      this.ranking = ranking;
+      console.log(ranking);
+    });
   }
 
 }

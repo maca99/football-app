@@ -8,6 +8,7 @@ export class CompetitionService {
   
   current:any;
   teams:any;
+
   private apiUrl = "http://localhost:8080/";
 
   constructor(public http:HttpClient) {}
@@ -30,6 +31,10 @@ export class CompetitionService {
     }
     getRankingCompetition(competition:any){
       const url = `${this.apiUrl}competition/${competition.id}/ranking`;
+      return this.http.get(url);
+    }
+    getTopScorers(competition:any){
+      const url = `${this.apiUrl}competition/${competition.id}/topscorers`;
       return this.http.get(url);
     }
 

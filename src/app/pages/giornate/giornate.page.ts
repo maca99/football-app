@@ -11,7 +11,9 @@ import { MatchServiceService } from 'src/app/match-service.service';
 export class GiornatePage implements OnInit {
 
   competition:any;
-  matches:any
+  days:any
+  matches:any;
+
 
   constructor(
     private competitionservice: CompetitionService,
@@ -23,8 +25,9 @@ export class GiornatePage implements OnInit {
   
     this.competition=this.competitionservice.current;
     this.matchservice.getDayMatchesById(this.competition.id).subscribe((matchDays) => {
-      this.matches = matchDays;
+      this.days = matchDays;
     });
+    
   }
 
 

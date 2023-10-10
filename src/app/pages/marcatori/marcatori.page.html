@@ -6,4 +6,37 @@
 
 <ion-content>
 
+  <ion-grid class="ion-text-center">
+
+    <!-- Intestazioni della tabella -->
+    <ion-row class="header-row">
+      <ion-col size="5">
+        <ion-text>Giocatore</ion-text>
+      </ion-col>
+
+      <ion-col >
+        <ion-text>Squadra</ion-text>
+      </ion-col>
+
+      <ion-col>
+        <ion-text>Gol</ion-text>
+      </ion-col>
+    </ion-row>
+    <!-- Dati tabellari -->
+    <ion-row *ngFor="let rank of ranking">
+      <ion-col size="5">
+        <ion-text>{{rank.player.name}}</ion-text>
+      </ion-col>
+
+      <ion-col >
+        <ion-text>{{rank.player.club.name}}</ion-text>
+      </ion-col>
+
+      <ion-col>
+        <ion-text>{{rank.goals}}</ion-text>
+      </ion-col>
+      
+      </ion-row>
+
+  </ion-grid>
 </ion-content>

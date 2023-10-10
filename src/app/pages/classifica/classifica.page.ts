@@ -12,14 +12,12 @@ export class ClassificaPage implements OnInit {
   private ranking:any;
 
   constructor(
-    private competitionservice: CompetitionService,
-    private rankingservice: CompetitionService,
-
+    private competitionservice: CompetitionService
   ) { }
 
   ngOnInit() {
     this.competition=this.competitionservice.current;
-    this.rankingservice.getRankingCompetition(this.competition).subscribe((ranking) => {
+    this.competitionservice.getRankingCompetition(this.competition).subscribe((ranking) => {
       this.ranking = ranking;
       console.log(ranking);
     });

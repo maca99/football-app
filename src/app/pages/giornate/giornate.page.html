@@ -1,15 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Giornate</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header></ion-header>
+
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let match of matches">
-      <ion-label>
-        <h2> Giornata</h2>
-        <p class="score"></p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+
+  <swiper-container>
+    <swiper-slide *ngFor="let daymatch of days">   
+        <ion-list>
+        
+          <ion-card *ngFor="let match of daymatch.matchs">
+            <div class="logo">
+              <img src="{{match.home.image}}" alt="img">
+            </div>
+
+            <span class="team-name">{{match.home.name}}</span>
+            <span class="result">{{match.home_score}} - {{match.visitor_score}}</span>
+            <span class="team-name">{{match.visitor.name}}</span>
+
+            <div class="logo">
+              <img src="{{match.visitor.image}}" alt="img">
+            </div>
+            
+          </ion-card>
+        
+       
+      </ion-list>
+       
+    </swiper-slide>
+  </swiper-container>
+
+
 </ion-content>
