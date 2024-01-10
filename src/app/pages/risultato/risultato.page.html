@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Risultati di Calcio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="match">
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Home</th>
+          <th></th>
+          <th>Visitor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+       
+          <td>
+          <img src="logo-real-madrid.png" alt="foto">
+            {{match.home.name}}
+          </td>
+          <td>
+            <small class="match-date">{{match.date}}</small>
+            {{match.home_score}} - {{match.visitor_score}}
+          </td>
+          <td>
+            {{match.visitor.name}}
+            <img src="logo-barcelona.png" alt="foto">
+          </td>
+        </tr>
+        <!-- Aggiungi più righe per i risultati -->
+        <tr>
+          <td class="strikers-home">
+            <ul>
+            <span class="striker">Nicolò Zaniolo 15'</span>
+            <span class="striker">Nicolò Zaniolo 35'</span>
+            </ul>
+            
+          </td>
+          <td><ion-icon name="football-outline"></ion-icon></td>
+          <td class="strikers-visitor">
+            <ul>
+             <span class="striker">Nicolò Zaniolo 15'</span> 
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- Statistiche della partita -->
+    <div class="details">
+      <p>Stadio: San siro</p>
+      <p>Città : Barcelona</p>
+      <p>TimeZone: Central Europe</p>
+      <!-- Aggiungi qui le statistiche specifiche della partita -->
+    </div>
+
+    
+</ion-content>

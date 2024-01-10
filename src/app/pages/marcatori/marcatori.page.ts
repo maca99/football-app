@@ -14,7 +14,7 @@ export class MarcatoriPage implements OnInit {
   constructor(private competitionservice: CompetitionService) { }
 
   ngOnInit() {
-    this.competition=this.competitionservice.current;
+    this.competition=this.competitionservice.competition;
     this.competitionservice.getTopScorers(this.competition).subscribe((ranking) => {
       this.ranking = ranking;
       console.log(ranking);

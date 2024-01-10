@@ -1,0 +1,95 @@
+// Variabili per i colori
+$background-color: #f0f0f0;
+$primary-color: #007bff;
+$secondary-color: #333;
+
+// Stile del container principale
+.container {
+  background-color: $background-color;
+  padding: 20px;
+}
+
+// Tabella dei risultati
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border: 1px solid $secondary-color;
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid $secondary-color;
+  }
+
+  th {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+
+// Pulsante per visualizzare dettagli
+.details-button {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Stile per i dettagli dei risultati
+.strikers-home{
+    font-size: 12px;
+    margin-bottom: 5px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        float: left; /* Imposta il float a destra */
+        clear: left; /* Aggiunge il clear per evitare sovrapposizioni */
+        margin-left: 10px;
+      }
+  
+}
+.strikers-visitor{
+    font-size: 12px;
+    margin-bottom: 5px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        float: right; /* Imposta il float a destra */
+        clear: right; /* Aggiunge il clear per evitare sovrapposizioni */
+        margin-right: 10px;
+      }
+  
+}
+.striker {
+    margin-bottom: 5px;
+    display: block;
+  }
+.details {
+  margin-top: 10px;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
+}
+.match-date {
+    font-size: 8px;
+    display: block;
+    margin-bottom: 5px;
+  }

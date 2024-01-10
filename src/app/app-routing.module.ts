@@ -34,6 +34,14 @@ const routes: Routes = [
     path: 'campionato/:id', 
     loadChildren: () => import('./pages/campionato/campionato.module').then(m => m.CampionatoPageModule)
   },
+  {
+    path: 'team',
+    loadChildren: () => import('./pages/team/team.module').then( m => m.TeamPageModule)
+  },
+  {
+    path: 'risultato/:id',
+    loadChildren: () => import('./pages/risultato/risultato.module').then( m => m.RisultatoPageModule)
+  },
 
 ];
 

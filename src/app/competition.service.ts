@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CompetitionService {
   
-  current:any;
+  competition:any;
   teams:any;
+  team:any;
 
   private apiUrl = "http://localhost:8080/";
 
@@ -36,6 +37,10 @@ export class CompetitionService {
     getTopScorers(competition:any){
       const url = `${this.apiUrl}competition/${competition.id}/topscorers`;
       return this.http.get(url);
+    }
+
+    setTeam(team:any){
+      this.team=team;
     }
 
 

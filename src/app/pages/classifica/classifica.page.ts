@@ -16,7 +16,7 @@ export class ClassificaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.competition=this.competitionservice.current;
+    this.competition=this.competitionservice.competition;
     this.competitionservice.getRankingCompetition(this.competition).subscribe((ranking) => {
       this.ranking = ranking;
       console.log(ranking);

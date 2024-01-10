@@ -15,4 +15,9 @@ export class MatchServiceService {
     return this.http.get(url);
   }
 
+  getMatchById(id:number){
+    const url = `${this.apiUrl}match/${id}`;
+    return this.http.get(url);
+  }
+
 }

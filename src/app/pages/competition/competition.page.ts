@@ -19,11 +19,11 @@ export class CompetitionPage implements OnInit {
     .subscribe(data=>{console.log(data);
       this.competitions=data;
       })
-    this.competitionservice.current
+    this.competitionservice.competition
   }
 
   goToCompetition(competition){
-    this.competitionservice.current=competition;
+    this.competitionservice.competition=competition;
     this.router.navigate(['campionato',competition.id]);
   }
 
