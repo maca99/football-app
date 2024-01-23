@@ -7,7 +7,7 @@ import { HomePage } from './pages/home/home.page';
 
 const routes: Routes = [
   {
-    path:'home',
+    path:'',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {

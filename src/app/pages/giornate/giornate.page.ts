@@ -24,8 +24,9 @@ export class GiornatePage implements OnInit {
   ngOnInit(){
   
     this.competition=this.competitionservice.competition;
-    this.matchservice.getDayMatchesById(this.competition.id).subscribe((matchDays) => {
-      this.days = matchDays;
+    this.matchservice.getDayMatchesById(this.competition.id).subscribe((days)=>{
+      this.days=days;
+      console.log(days);
     });
     
   }
