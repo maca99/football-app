@@ -38,7 +38,13 @@
       </ion-col>
     </ion-row>
     <!-- Dati tabellari -->
-    <ion-row *ngFor="let rank of ranking">
+    <ion-row *ngFor="let rank of ranking;let i = index">
+      <ion-col class="pos">
+        {{ i + 1 }} {{ item }}
+      </ion-col>
+      <ion-col class="logo">
+        <img class="logo" src="https://img.freepik.com/premium-vector/soccer-logo-team_55206-10.jpg" alt="">
+      </ion-col>  
       <ion-col size="5">
         <ion-text>{{rank.team.name}}</ion-text>
       </ion-col>

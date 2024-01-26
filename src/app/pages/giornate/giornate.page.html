@@ -7,11 +7,11 @@
       <h1 class="title">{{daymatch.Giornata}}</h1>   
         <ion-list *ngFor="let match of daymatch.matches">
 
-          <ion-card >
+          <ion-card (click)="goToMatch(match)">
             <div class="logo">
               <img src="https://img.freepik.com/premium-vector/soccer-logo-team_55206-10.jpg" alt="img">
             </div>
-
+            
             <span class="team-name">{{match.home.name}}</span>
             <span class="result">{{match.home_score}} - {{match.visitor_score}}</span>
             <span class="team-name">{{match.visitor.name}}</span>

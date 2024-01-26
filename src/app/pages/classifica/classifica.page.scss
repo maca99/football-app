@@ -1,0 +1,64 @@
+
+$secondary-color: #2ecc71;
+
+// Sfondo del corpo della pagina
+body {
+  background-color: #ecf0f1;
+}
+
+// Stile per la barra degli strumenti
+ion-toolbar {
+  color: black;
+}
+
+.header-row{
+    background-color: black;
+    color: #fff;
+}
+
+// Stile per il titolo dell'intestazione
+ion-title {
+  font-size: 1.5em;
+}
+
+// Stile per le righe della tabella
+ion-row {
+  border-bottom: 1px solid #ddd; // Aggiungi una linea di separazione tra le righe
+  margin-bottom: 10px; // Aggiungi uno spazio tra le righe
+}
+
+// Stile per le colonne della tabella
+ion-col {
+  padding: 10px;
+}
+
+// Stile per le immagini dei loghi
+.logo img {
+  width: 50px; // Regola la larghezza delle immagini dei loghi
+  height: 50px; // Regola l'altezza delle immagini dei loghi
+  border-radius: 50%; // Rendi le immagini dei loghi circolari
+  border: 2px solid $secondary-color; // Aggiungi un bordo attorno alle immagini
+}
+
+.pos{
+    color: darkgray;
+}
+
+// Query media per regolare gli stili in base alle dimensioni dello schermo
+@media only screen and (max-width: 600px) {
+  // Aggiungi stili specifici per schermi con larghezza massima di 600px
+  ion-col {
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px; // Imposta una larghezza fissa per il logo
+    height: 100px; // Imposta un'altezza fissa per il logo
+    border-radius: 50%; // Rendi le immagini dei loghi circolari
+    border: 2px solid $secondary-color; // Aggiungi un bordo attorno alle immagini
+    min-width: 100px; // Imposta la larghezza minima del logo
+    min-height: 100px; // Imposta l'altezza minima del logo
+  }
+}
+
+// Altri stili responsive possono essere aggiunti secondo le tue esigenze

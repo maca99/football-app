@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { CompetitionService } from 'src/app/competition.service';
 import { MatchServiceService } from 'src/app/match-service.service';
 
@@ -18,7 +18,7 @@ export class GiornatePage implements OnInit {
   constructor(
     private competitionservice: CompetitionService,
     private matchservice: MatchServiceService,
-    private route: ActivatedRoute) { }
+    private router: Router) { }
 
 
   ngOnInit(){
@@ -29,6 +29,10 @@ export class GiornatePage implements OnInit {
       console.log(days);
     });
     
+  }
+
+  goToMatch(match:any){
+    this.router.navigate(['/risultato/'+  match.id]);
   }
 
 

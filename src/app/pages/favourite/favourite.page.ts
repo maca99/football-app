@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Storage } from '@ionic/storage-angular';
 @Component({
   selector: 'app-favourite',
   templateUrl: './favourite.page.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouritePage implements OnInit {
 
-  constructor() { }
+  constructor(private storage: Storage) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.storage.create
   }
 
 }
