@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Team</ion-title>
+    <ion-title>Scegli la tua Squadra</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-list>
+      <ion-item *ngFor="let team of teams" class="custom-item" (click)="setFavourite(team.id)">
+          <img alt="logo" src="https://img.freepik.com/premium-vector/soccer-logo-team_55206-10.jpg" class="custom-image"/>
+          <ion-label class="label">{{team.name}}</ion-label>
+      </ion-item>
+    </ion-list>
 </ion-content>

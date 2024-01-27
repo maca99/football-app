@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
+import { of } from 'rxjs/internal/observable/of';
+import { TeamService } from 'src/app/team.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamPage implements OnInit {
 
-  constructor() { }
+  private teams:any;
+
+  constructor(private teamService: TeamService,private router: Router) {}
 
   ngOnInit() {
+    this.teamService.getAllTeams().subscribe(data=>{console.log(data);
+      this.teams=data;
+      })
+  }
+
+  setFavourite(id:number){
+    this.teamService.setFavouriteTeam(id);
+    this.router.navigate(["favourite"]);
   }
 
 }

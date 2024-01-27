@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Storage } from '@ionic/storage-angular';
+import { TeamService } from 'src/app/team.service';
+
 @Component({
   selector: 'app-favourite',
   templateUrl: './favourite.page.html',
@@ -7,10 +8,14 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class FavouritePage implements OnInit {
 
-  constructor(private storage: Storage) {}
+  private team:any;
 
-  async ngOnInit() {
-    await this.storage.create
+  constructor(private teamService: TeamService) {}
+
+  ngOnInit() {
+    this.team = this.teamService.getFavouriteTeam().subscribe(data=>{console.log(data);
+      this.team=data;
+      });
   }
 
 }
