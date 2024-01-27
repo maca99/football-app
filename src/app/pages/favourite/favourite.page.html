@@ -5,8 +5,22 @@
 </ion-header>
 
 <ion-content>
-  <h1>
-    {{team?.name}}
-  </h1>
+  <ion-content>
 
+    <div class="header">
+      <div class="image-container">
+        <ion-avatar class="header-image" >
+          <img src="https://img.freepik.com/premium-vector/soccer-logo-team_55206-10.jpg" alt="Immagine">
+        </ion-avatar>
+      </div>
+      <h2 class="title">{{ team?.name }}</h2>
+    </div>
+    <div class="content">
+      <p>
+        {{team?.dettagli}}
+      </p>
+    </div>
+    <div>
+      <ion-router-outlet></ion-router-outlet>
+    </div>
 </ion-content>

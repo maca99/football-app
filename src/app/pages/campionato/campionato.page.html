@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>campionato</ion-title>
+    <ion-title>{{ team?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,10 +9,10 @@
   <div class="header">
     <div class="image-container">
       <ion-avatar class="header-image" >
-        <img src="{{campionato?.logo}}" alt="Immagine">
+        <img src="https://img.freepik.com/premium-vector/soccer-logo-team_55206-10.jpg" alt="Immagine">
       </ion-avatar>
     </div>
-    <h2 class="title">{{ campionato?.name }}</h2>
+    <h2 class="title">{{ team?.name }}</h2>
   </div>
   <div class="content">
     <p>
