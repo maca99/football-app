@@ -18,10 +18,9 @@ export class FavouritePage implements OnInit {
 
 async ngOnInit() {
   try {
-    const id = await this.storage.get('Favourite');
+    let id:number = parseInt(await this.storage.get('Favourite'));
     
-    this.teamService.getFavouriteTeam(id).subscribe(data => {
-      console.log(data);
+    this.teamService.getFavouriteTeam(id).subscribe((data) => {
       this.team = data;
     });
     

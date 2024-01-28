@@ -21,8 +21,9 @@ export class TeamPage implements OnInit {
       })
   }
 
-  async setFavourite(id:number){
-    await this.storageService.set('Favourite',id);
+  async setFavourite(id:any){
+    let teamID = parseInt(id);
+    await this.storageService.set('Favourite',teamID);
     this.router.navigate(["favourite"]);
   }
 
