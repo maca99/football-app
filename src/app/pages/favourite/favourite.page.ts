@@ -14,16 +14,20 @@ export class FavouritePage implements OnInit {
 
   constructor(private teamService: TeamService,private storage:StorageService,private router:Router) {}
 
-  async ngOnInit() {
+
+
+async ngOnInit() {
+  try {
     const id = await this.storage.get('Favourite');
-    if (id) {
-      this.teamService.getFavouriteTeam(id).subscribe(data => {
-        console.log(data);
-        this.team = data;
-      });
-    } else {
-      // id è null, reindirizza a 'team'
-      this.router.navigate(['/team']);
-    }
+    
+    this.teamService.getFavouriteTeam(id).subscribe(data => {
+      console.log(data);
+      this.team = data;
+    });
+    
+  } catch (error) {
+    this.router.navigate(['/team']);
   }
+}
+
 }

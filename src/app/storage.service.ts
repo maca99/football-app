@@ -39,4 +39,9 @@ export class StorageService {
     let value = await this._storage.clear();
   }
 
+  public async size(){
+    let result = await this._storage.length();
+    return result;
+  }
+
 }
